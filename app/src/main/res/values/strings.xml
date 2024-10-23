@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">MyRVExample</string>
+    <string-array name="name_array">
+        <item>Tanya Barrera</item>
+        <item>Michael Hernandez</item>
+        <item>Michael Welch</item>
+        <item>Brandi Lopez</item>
+        <item>Christina Browning</item>
+        <item>Patrick Koch</item>
+        <item>Donald Bates</item>
+        <item>Sarah Hernandez DDS</item>
+        <item>Dana Carson</item>
+        <item>Brianna Sanchez</item>
+    </string-array>
+    <string-array name="address_array">
+        <item>8709 Clark Villages Apt. 134 Aliciashire, WV 95789</item>
+        <item>
+34715 Morales Wells Apt. 603 Port Veronica, NM 36606
+</item>
+        <item>260 Margaret Place Apt. 589 Karenside, AK 23718</item>
+        <item>088 Ruth Mill Caldwellstad, NE 64508</item>
+        <item>
+209 Deborah Forest Suite 309 Hollowayfort, SC 96327
+</item>
+        <item>6989 Thomas Port Apt. 861 Murrayshire, TN 42910</item>
+        <item>996 Campbell Parkways South Eric, AR 72390</item>
+        <item>
+945 Donaldson Villages Suite 469 Port Javier, DC 48754
+</item>
+        <item>
+11918 Kyle Turnpike Suite 438 Victorborough, MD 87588
+</item>
+        <item>6139 Brianna Plains Suite 852 New Samuel, TX 28219</item>
+    </string-array>
+    <string-array name="profiledesc_array">
+<item>
+Idea should outside share. Weight hard daughter wide authority defense.
+</item>
+        <item>
+The vote local later think pattern sense. Investment old most. Television everyone friend much. Age heavy at south.
+</item>
+        <item>
+Card yes down challenge receive quality positive. Figure sport investment outside assume. Against arm result lawyer police.
+</item>
+        <item>
+More leader adult. Service attorney seven what provide since dark. Base beautiful year certain speak scientist stage.
+</item>
+        <item>
+Figure specific form major. Standard onto factor better meeting production strong.
+</item>
+        <item>
+Society able go because decide. West board again girl face view leave beyond. Let agree television recent though.Tv late pull. Simply visit pay morning side.
+</item>
+        <item>
+Determine day bar scene yard soldier student conference. Crime player we which newspaper whole front hot.
+</item>
+        <item>
+Apply treatment commercial Democrat life describe claim. Employee carry fall form lawyer military everyone.
+</item>
+        <item>
+She gun thought same focus. Less as field during fine including. Report easy memory.
+</item>
+        <item>
+Model whole word onto letter. Fast success among economy street land task.
+</item>
+    </string-array>
+
+</resources>

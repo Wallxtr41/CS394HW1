@@ -16,31 +16,79 @@
         tools:context=".UserDetailActivity">
 
         <TextView
-            android:id="@+id/nameView"
+            android:id="@+id/idView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:text="id"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/profileView"
+            android:id="@+id/carModelView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/nameView"
-            app:layout_constraintTop_toBottomOf="@+id/nameView" />
+            android:text="carModel"
+            app:layout_constraintStart_toStartOf="@+id/idView"
+            app:layout_constraintTop_toBottomOf="@+id/idView" />
 
         <TextView
-            android:id="@+id/addrView"
+            android:id="@+id/carModelYearView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="TextView"
-            app:layout_constraintStart_toStartOf="@+id/profileView"
-            app:layout_constraintTop_toBottomOf="@+id/profileView" />
+            android:text="carModelYear"
+            app:layout_constraintStart_toStartOf="@+id/carModelView"
+            app:layout_constraintTop_toBottomOf="@+id/carModelView" />
+        <TextView
+            android:id="@+id/countryView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="country"
+            app:layout_constraintStart_toStartOf="@+id/carModelYearView"
+            app:layout_constraintTop_toBottomOf="@+id/carModelYearView" />
+        <TextView
+            android:id="@+id/priceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="price"
+            app:layout_constraintStart_toStartOf="@+id/countryView"
+            app:layout_constraintTop_toBottomOf="@+id/countryView" />
+        <TextView
+            android:id="@+id/sellerFirstNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="firstName"
+            app:layout_constraintStart_toStartOf="@+id/priceView"
+            app:layout_constraintTop_toBottomOf="@+id/priceView" />
+        <TextView
+            android:id="@+id/sellerLastNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="lastName"
+            app:layout_constraintStart_toStartOf="@+id/sellerFirstNameView"
+            app:layout_constraintTop_toBottomOf="@+id/sellerFirstNameView" />
+        <TextView
+            android:id="@+id/sellerGenderView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="gender"
+            app:layout_constraintStart_toStartOf="@+id/sellerLastNameView"
+            app:layout_constraintTop_toBottomOf="@+id/sellerLastNameView" />
+        <TextView
+            android:id="@+id/sellerAvatarView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="avatar"
+            app:layout_constraintStart_toStartOf="@+id/sellerGenderView"
+            app:layout_constraintTop_toBottomOf="@+id/sellerGenderView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

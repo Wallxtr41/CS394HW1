@@ -15,22 +15,35 @@ class ItemAdapter(private val data: List<User>): RecyclerView.Adapter<ItemAdapte
 
         private lateinit var user: User
 
-        val nameView: TextView = view.findViewById(R.id.nameTV)
-        val profileView: TextView = view.findViewById(R.id.profileDescTV)
+        val idView: TextView = view.findViewById(R.id.idTV)
+        val carModelView: TextView = view.findViewById(R.id.carModelTV)
+        val countryView: TextView = view.findViewById(R.id.countryTV)
+        val priceView: TextView = view.findViewById(R.id.priceTV)
+
         init {
             view.setOnClickListener{
                 val context = itemView.context
                 val showUserIntent = Intent(context, UserDetailActivity::class.java)
-                showUserIntent.putExtra(UserDetailActivity.USER_NAME, user.name)
-                showUserIntent.putExtra(UserDetailActivity.USER_ADDR, user.address)
-                showUserIntent.putExtra(UserDetailActivity.USER_PROFILE, user.profileDesc)
+                showUserIntent.putExtra(UserDetailActivity.USER_ID, user.id)
+                showUserIntent.putExtra(UserDetailActivity.USER_CAR_MODEL, user.carModel)
+                showUserIntent.putExtra(UserDetailActivity.USER_CAR_MODEL_YEAR, user.carModelYear)
+                showUserIntent.putExtra(UserDetailActivity.USER_COUNTRY, user.country)
+                showUserIntent.putExtra(UserDetailActivity.USER_PRICE, user.price)
+                showUserIntent.putExtra(UserDetailActivity.USER_SELLER_FIRST_NAME, user.sellerFirstName)
+                showUserIntent.putExtra(UserDetailActivity.USER_SELLER_LAST_NAME, user.sellerLastName)
+                showUserIntent.putExtra(UserDetailActivity.USER_SELLER_GENDER, user.sellerGender)
+                showUserIntent.putExtra(UserDetailActivity.USER_SELLER_AVATAR, user.sellerAvatar)
+
                 context.startActivity(showUserIntent)
             }
         }
         fun bind(user:User){
             this.user = user
-            nameView.text = user.name
-            profileView.text = user.profileDesc
+            idView.text = user.id
+            carModelView.text = user.carModel
+            countryView.text = user.country
+            priceView.text = user.price
+
         }
     }
 

@@ -25,14 +25,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/sellerAvatarView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/idView"
+            app:layout_constraintTop_toBottomOf="@+id/idView" />
+
         <TextView
             android:id="@+id/carModelView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="carModel"
-            app:layout_constraintStart_toStartOf="@+id/idView"
-            app:layout_constraintTop_toBottomOf="@+id/idView" />
+            app:layout_constraintStart_toStartOf="@+id/sellerAvatarView"
+            app:layout_constraintTop_toBottomOf="@+id/sellerAvatarView" />
 
         <TextView
             android:id="@+id/carModelYearView"
@@ -82,13 +90,6 @@
             android:text="gender"
             app:layout_constraintStart_toStartOf="@+id/sellerLastNameView"
             app:layout_constraintTop_toBottomOf="@+id/sellerLastNameView" />
-        <TextView
-            android:id="@+id/sellerAvatarView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="avatar"
-            app:layout_constraintStart_toStartOf="@+id/sellerGenderView"
-            app:layout_constraintTop_toBottomOf="@+id/sellerGenderView" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

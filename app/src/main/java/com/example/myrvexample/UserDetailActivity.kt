@@ -1,5 +1,7 @@
 package com.example.myrvexample
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.example.myrvexample.databinding.ActivityUserDetailBinding
+import android.util.Base64;
+import android.widget.ImageView;
 
 class UserDetailActivity : AppCompatActivity() {
     companion object{
@@ -38,22 +42,26 @@ class UserDetailActivity : AppCompatActivity() {
         val userSellerFirstName = intent.getStringExtra(USER_SELLER_FIRST_NAME)
         val userSellerLastName = intent.getStringExtra(USER_SELLER_LAST_NAME)
         val userSellerGender = intent.getStringExtra(USER_SELLER_GENDER)
-        val userSellerAvatar = intent.getStringExtra(USER_SELLER_AVATAR)
+        val userSellerAvatar = decodeBase64ToBitmap(intent.getStringExtra(USER_SELLER_AVATAR))
 
         binding.idView.text = userId
-        binding.carModelView.text = userCarModel
-        binding.carModelYearView.text = userCarModelYear
-        binding.countryView.text = userCountry
-        binding.priceView.text = userPrice
-        binding.sellerFirstNameView.text = userSellerFirstName
-        binding.sellerLastNameView.text = userSellerLastName
-        binding.sellerGenderView.text = userSellerGender
-        binding.sellerAvatarView.text = userSellerAvatar
+        binding.carModelView.text = "Car Model: " + userCarModel
+        binding.carModelYearView.text = "Car Model Year: "+userCarModelYear
+        binding.countryView.text = "Country: " +userCountry
+        binding.priceView.text = "Price: " +userPrice
+        binding.sellerFirstNameView.text = "First Name: " +userSellerFirstName
+        binding.sellerLastNameView.text = "Last Name: " + userSellerLastName
+        binding.sellerGenderView.text = "Gender: " + userSellerGender
+        binding.sellerAvatarView.setImageBitmap(userSellerAvatar)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+    fun decodeBase64ToBitmap(base64String: String?): Bitmap {
+        val decodedBytes: ByteArray = Base64.decode(base64String, Base64.DEFAULT)
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.size)
     }
 }

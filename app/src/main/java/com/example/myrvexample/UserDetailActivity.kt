@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.myrvexample.databinding.ActivityUserDetailBinding
 import android.util.Base64;
 import android.widget.ImageView;
+import com.example.myrvexample.model.User
 
 class UserDetailActivity : AppCompatActivity() {
     companion object{
@@ -42,17 +43,26 @@ class UserDetailActivity : AppCompatActivity() {
         val userSellerFirstName = intent.getStringExtra(USER_SELLER_FIRST_NAME)
         val userSellerLastName = intent.getStringExtra(USER_SELLER_LAST_NAME)
         val userSellerGender = intent.getStringExtra(USER_SELLER_GENDER)
-        val userSellerAvatar = decodeBase64ToBitmap(intent.getStringExtra(USER_SELLER_AVATAR))
+        val userSellerAvatar = intent.getStringExtra(USER_SELLER_AVATAR)
 
-        binding.idView.text = userId
-        binding.carModelView.text = "Car Model: " + userCarModel
-        binding.carModelYearView.text = "Car Model Year: "+userCarModelYear
-        binding.countryView.text = "Country: " +userCountry
-        binding.priceView.text = "Price: " +userPrice
-        binding.sellerFirstNameView.text = "First Name: " +userSellerFirstName
-        binding.sellerLastNameView.text = "Last Name: " + userSellerLastName
-        binding.sellerGenderView.text = "Gender: " + userSellerGender
-        binding.sellerAvatarView.setImageBitmap(userSellerAvatar)
+
+
+        val user = User(
+            id = userId ?: "",
+            carModel = "Car Model: $userCarModel" ?: "Car Model:",
+            carModelYear = "Car Model Year:  $userCarModelYear" ?: "Car Model Year:",
+            country = "Country: $userCountry" ?: "Country:",
+            price = "Price: $userPrice" ?: "",
+            sellerFirstName = "Seller First Name: $userSellerFirstName" ?: "Seller First Name:",
+            sellerLastName = "Seller Last Name: $userSellerLastName" ?: "Seller Last Name:",
+            sellerGender = "Seller Gender: $userSellerGender" ?: "Seller Gender:",
+            sellerAvatar = userSellerAvatar ?: ""
+        )
+
+        binding.user = user
+
+
+        binding.sellerAvatarView.setImageBitmap(decodeBase64ToBitmap(userSellerAvatar) )
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
